@@ -29,7 +29,7 @@ pipeline {
         transfers: [sshTransfer(cleanRemote: false, excludes: '',
         execCommand: '''fuser -k 8080/tcp
         export BUILD_ID=Pipeline-PetClinic
-        nohup java -jar /home/ubuntu/deplpy/spring-petclinic-3.5.0-SNAPSHOT.jar >> nohup.out 2>&1 &''',
+        nohup java -jar /home/ubuntu/deploy/spring-petclinic-3.5.0-SNAPSHOT.jar >> nohup.out 2>&1 &''',
         execTimeout: 120000, 
         flatten: false, 
         makeEmptyDirs: false, 
