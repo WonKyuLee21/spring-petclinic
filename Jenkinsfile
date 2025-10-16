@@ -5,7 +5,7 @@ pipeline {
     // GitHub Clone
     stage('Git clone') {
           steps {
-            git url: 'https://gitbub.com/sjh4616/spring-petclinic.git/', branch: 'main'
+            git url: 'https://github.com/sjh4616/spring-petclinic.git/', branch: 'main'
           }
       }
   }
