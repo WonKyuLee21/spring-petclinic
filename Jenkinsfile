@@ -52,7 +52,7 @@ pipeline {
     stage ('Docker Image Remove') {
       steps {
         sh """
-        docker rmi spring-petclnic:BUILD_NUMBER
+        docker rmi spring-petclinic:BUILD_NUMBER
         docker rmi wonkyulee/spring-petclinic:latest
         """          
     }
