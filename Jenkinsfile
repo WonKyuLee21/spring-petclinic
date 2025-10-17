@@ -17,13 +17,7 @@ pipeline {
           }
       }
     
-      // Maven Build
-      stage('Maven Build') {
-        steps {
-          sh 'mvn -Dmaven.test.failure.ignore=true clean package'
-          
-        }
-      }
+    
 
     // Docker Image 생성
     stage('Docker Image Build') {
