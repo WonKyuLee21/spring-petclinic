@@ -25,7 +25,7 @@ pipeline {
     // Docker Image 생성
     stage('Docker Image Build') {
       steps{
-        dir("${env,WORKSPACE}") {
+        dir("${env.WORKSPACE}") {
           sh """
           docker build -t wonkyulee21/spring-petclinic:$BUILD_NUMBER .
           docker tag wonkyulee21/spring-petclinic:$BUILD_NUMBER s4616/spring-petclinic:latest
