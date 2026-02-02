@@ -6,10 +6,12 @@
 
   <h2 th:text="#{welcome}">CAT WORLD</h2>
   <div class="row">
-    <div class="col-md-12">
-      <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pet.gif}" />
-    </div>
+  <div class="col-md-12">
+    <img class="img-responsive mx-auto d-block"
+         th:src="@{/resources/images/pet.gif}"
+         style="width: 60%;" />
   </div>
+</div>
 
 </body>
 
