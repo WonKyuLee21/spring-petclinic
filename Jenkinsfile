@@ -54,7 +54,9 @@ pipeline {
     withKubeConfig([credentialsId: '602-kube']) {
       sh """
       cd was
-      sed "s|wonkyulee21/spring-petclinic:latest|wonkyulee21/spring-petclinic:${BUILD_NUMBER}|g" deployment.yaml > deployment${BUILD_NUMBER}.yaml
+      sed "s|wonkyulee21/spring-petclinic:latest|\
+      wonkyulee21/spring-petclinic:${BUILD_NUMBER}|g" \
+      deployment.yaml > deployment${BUILD_NUMBER}.yaml > kubectl apply -f deployment${BUILD_NUMBER}.yaml
       kubectl apply -f deployment${BUILD_NUMBER}.yaml
       """
     }
