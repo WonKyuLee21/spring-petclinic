@@ -55,7 +55,6 @@ pipeline {
       sh """
       cd was
       sed "s|wonkyulee21/spring-petclinic:latest|wonkyulee21/spring-petclinic:${BUILD_NUMBER}|g" deployment.yaml | kubectl apply -f -
-      kubectl apply -f deployment.yaml
       """
     }
   }
