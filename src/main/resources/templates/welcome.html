@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-
-<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 
 <body>
 
-  <h2 th:text="#{welcome}">CAT WORLD</h2>
   <div class="row">
-  <div class="col-md-12">
-    <img class="img-responsive mx-auto d-block"
-         th:src="@{/resources/images/pet.gif}"
-         style="width: 60%;" />
+    <div class="col-md-12 text-center">
+      <img class="img-responsive mx-auto d-block"
+           th:src="@{/resources/images/pet.gif}"
+           style="max-width: 800px; width: 100%;" />
+
+      <h3 style="margin-top: 15px;">Take a look</h3>
+    </div>
   </div>
-</div>
 
 </body>
-
 </html>
